@@ -1,13 +1,13 @@
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+import express from 'express';
+const app = express();
+const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-var router = express.Router();
+const router = express.Router();
 
 
 router.get('/', function(req, res) {
