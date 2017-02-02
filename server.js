@@ -1,4 +1,5 @@
 import express from 'express';
+import DataUtils from './utils/DataUtils.js';
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -10,8 +11,14 @@ const port = process.env.PORT || 3000;
 const router = express.Router();
 
 
-router.get('/', function(req, res) {
-  res.json({message: 'Welcome to the api!'});
+router.get('/names', function(req, res) {
+  res.json(DataUtils.apiGet());
+});
+
+//curl --data "name=amitabh" http://localhost:3000/api/name
+router.post('/name', function(req, res) {
+  DataUtils.apiPost(req);
+  res.json({});
 });
 
 

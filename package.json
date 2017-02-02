@@ -2,7 +2,8 @@
   "name": "application-name",
   "main": "server.js",
   "scripts": {
-    "app": "babel-node server.js"
+    "start": "babel-node server.js",
+    "startmon": "babel-watch server.js"
   },
   "dependencies": {
     "express": "~4.0.0",
