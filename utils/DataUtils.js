@@ -1,12 +1,19 @@
 export default class DataUtils {
 
-  static apiGet(){
-    return {
+  constructor() {
+    this.data = {
       names: [ 'marge', 'homer', 'bart', 'lisa', 'maggie']
     };
   }
 
-  static apiPost(req) {
-   console.log('Post happend' + JSON.stringify(req.body));
+  apiGet(){
+    console.log();
+    return this.data;
+  }
+
+
+  apiPost(req) {
+    this.data.names.push(req.body.name);
+    console.log('Post happend' + JSON.stringify(req.body));
   }
 }
