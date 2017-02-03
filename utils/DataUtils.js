@@ -7,10 +7,9 @@ export default class DataUtils {
   }
 
   apiGet(){
-    console.log();
+    console.log('Handling apiGet');
     return this.data;
   }
-
 
   apiPost(req) {
     this.data.names.push(req.body.name);
